@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  terraform:
+    build: .
+    image: rpi-terraform
+    container_name: rpi-terraform
+    stdin_open: true
+    tty: true
+    volumes:
+      - type: bind
+        source: .
+        target: /working
